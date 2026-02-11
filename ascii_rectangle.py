@@ -12,10 +12,13 @@ class Cell:
         return "[ ]"
 
 
-def delay_print(txt:str)->None:
+def delay_print(txt: str) -> None:
     for char in txt:
-        print(char,flush=True,end=' ')
-        sleep(0.1)
+        if char == "\n":
+            print(flush=True)
+        else:
+            print(char, flush=True, end='')
+            sleep(0.1)
 
 def ascii_rectangle():
     SEP = "===="
@@ -44,4 +47,4 @@ def ascii_rectangle():
 
 
 if __name__ == "__main__":
-    print(ascii_rectangle())
+    delay_print(ascii_rectangle())
