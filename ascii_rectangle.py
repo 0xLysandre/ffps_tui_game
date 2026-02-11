@@ -1,11 +1,21 @@
+from time import sleep
+
 class Cell:
     def __init__(self, row, col):
         self.row = row
         self.col = col
+        self.presence = False
 
     def __str__(self):
+        if self.presence:
+            return "[x]"
         return "[ ]"
 
+
+def delay_print(txt:str)->None:
+    for char in txt:
+        print(char,flush=True,end=' ')
+        sleep(0.1)
 
 def ascii_rectangle():
     SEP = "===="
@@ -28,6 +38,7 @@ def ascii_rectangle():
         full_line(row0) + "\n"
         + pipe_line + "\n"
         + mid_line + "\n"
+        + pipe_line + "\n"        
         + full_line(row2) + "\n"
     )
 
