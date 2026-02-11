@@ -26,7 +26,7 @@ def ascii_rectangle():
     row2 = [Cell(2, c) for c in range(5)]
 
     full_line = lambda cells: SEP.join(str(c) for c in cells)
-    pipe_line = " |" + "      |" * 4
+    pipe_line = " |      |             |      |"
 
     mid_line = (
         str(row1[0]) + SEP + str(row1[1])
