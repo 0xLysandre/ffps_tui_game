@@ -13,7 +13,7 @@ class Cell:
         return "[ ]"
 
 
-def delay_print(txt:str)->None:
+def delay_print(txt: str) -> None:
     for char in txt:
         print(char,flush=True,end='')
         sleep(0.0125)
@@ -44,4 +44,4 @@ def ascii_rectangle():
     )
 
 if __name__ == "__main__":
-    delay_print(ascii_rectangle())
+    print(ascii_rectangle())
