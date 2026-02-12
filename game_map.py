@@ -1,4 +1,5 @@
 from time import sleep
+from random import randint, choice
 
 class Cell:
     def __init__(self, row, col):
@@ -14,8 +15,8 @@ class Cell:
 
 def delay_print(txt:str)->None:
     for char in txt:
-        print(char,flush=True,end=' ')
-        sleep(0.1)
+        print(char,flush=True,end='')
+        sleep(0.0125)
 
 def ascii_rectangle():
     SEP = "===="
@@ -42,6 +43,5 @@ def ascii_rectangle():
         + full_line(row2) + "\n"
     )
 
-
 if __name__ == "__main__":
-    print(ascii_rectangle())
+    delay_print(ascii_rectangle())
